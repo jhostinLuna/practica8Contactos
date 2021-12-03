@@ -13,6 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.distribute.Distribute;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnalta, btnbuscar, btnmodificar, btneliminar, btnbase, btncontacto;
@@ -23,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCenter.start(getApplication(), "d5009b7e-cf2c-4a1b-a124-141675db732d",
+                Analytics.class, Crashes.class);
+        AppCenter.start(getApplication(), "d5009b7e-cf2c-4a1b-a124-141675db732d", Distribute.class);
 
         btnalta = (Button) findViewById(R.id.btnalta);
         btnbuscar = (Button) findViewById(R.id.btnbuscar);
