@@ -5,13 +5,13 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-
+    ndkVersion '23.1.7779620'
     defaultConfig {
         applicationId "com.juangg.practica8contactos"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
